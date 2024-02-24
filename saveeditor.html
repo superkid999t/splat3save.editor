@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="application-name" content="Flexlion">
+
+    <meta name="description" content="Save Editor.">
+    
+    <link rel="shortcut icon" href="./assets/img/favico.ico">
+    <link rel="apple-touch-icon" href="./assets/img/favico.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexlion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/js/jszip.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img src="./assets/img/favico.ico" width="50" height="43" alt="">
+            <span class="fs-4" style="padding-left: 10px;">Flexlion</span>
+        </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="./configurator.html" class="nav-link">Configurator</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Save Editor</a></li>
+        <li class="nav-item"><a href="./fxnetctrl.html" class="nav-link">FXNETCTRL</a></li>
+        <li class="nav-item"><a href="./account.html" class="nav-link">Account</a></li>
+      </ul>
+    </header>
+  </div>
+  <div class="container">
+    <img class="d-block mx-auto mb-4 mw-100 h-auto" src="./assets/img/save-editor-logo.png" alt="" width="765" height="277">
+    <!-- <div class="col-lg-6 mx-auto">
+      <strong class="lead mb-4" style="color:red">USING SAVE EDITS IS NOT SAFE ONLINE AND YOU WILL GET BANNED IF YOU USE IT ONLINE. PLEASE ONLY USE OFFLINE/EMULATOR.</strong>
+    </div> -->
+    <br>
+    <button type="button" onclick="onDecryptCloudSave()" class="btn btn-outline-primary" id="cloud_save_dl">Use Flexlion CloudSave</button>
+    <br><br>
+    <p class="fw-bold" >Decrypt Save:</p>
+    <input id ="save_decrypt" class="form-control w-auto" type="file" onchange="onDecryptSave(document.getElementById('save_decrypt').files[0])"/>
+    <p id="decrypt_error" class="fw-bold" style="color:red"></p>
+    <hr>
+    <a href="#" type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalPlayerSett">Player Settings</a><br><br>
+    <a href="#" type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalWeaponSett">Weapons</a><br><br>
+    <a href="#" type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalGearHeadSett">Headgear</a><br><br>
+    <a href="#" type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalGearClothesSett">Clothes</a><br><br>
+    <a href="#" type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalGearShoesSett">Shoes</a><br><br>
+    <a href="#" type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalPlazaPost">Plaza Post</a>
+    <hr>
+    <button type="button" onclick="onEditSave(false)" class="btn btn-primary" id="edit_save_btn">Save</button>
+    <button type="button" onclick="onEditSave(true)" class="btn btn-primary" id="edit_save_btn">Save to Flexlion CloudSave</button>
+    <p id="edit_error" class="fw-bold" style="color:red"></p>
+    <div class="modal fade" id="modalPlayerSett" tabindex="-1" role="dialog" aria-labelledby="modalPlayerSettTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1000px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalPlayerSettTitle">Player Settings</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label class="fw-bold" for="player_name_holder">Name:</label>
+            <input class="form-control player_name_holder d-inline-block w-auto" id="player_name_holder" type="text"/>
+            <label class="fw-bold" for="player_identifier_holder">Identifier:</label>
+            <input class="form-control player_identifier_holder d-inline-block w-auto" id="player_identifier_holder" type="text"/>
+            <br><br>
+            <div class="CstContainer">
+            <img class="nameplate_bg_sel nameplate_bg_player base" id ="nameplate_bg_player" src="./assets/img/npl/Npl_Tutorial00.png">
+            <p class="nameplate_name" id="nameplate_name" style="color:white">Player</p>
+            <p class="nameplate_identifier" id="nameplate_identifier" style="color:white">#0000</p>
+            </div>
+            <br>
+            <label style="color:lime" class="fw-bold" for="player_rank_holder">Level:</label>
+            <input class="form-control player_rank_holder d-inline-block w-auto" type="number" id="player_rank_holder" min="1" max="999" value="1"/>
+            <label style="color:lime" class="fw-bold" for="player_rank_exp_holder">Level XP:</label>
+            <input class="form-control player_rank_exp_holder d-inline-block w-auto" type="number" id="player_rank_exp_holder" value="0"/>
+            <br><br>
+            <img src="./assets/img/ui/money.png" width="35" height="35" style="margin-bottom: 10px;">
+            <label class="fw-bold" for="money_holder">Money:</label>
+            <input class="form-control money_holder d-inline-block w-auto" type="number" id="money_holder" min="0" max="9999999" value="0"/>
+            <img src="./assets/img/ui/snail.png" width="35" height="35" style="margin-bottom: 10px;">
+            <label class="fw-bold" for="snail_holder">Snails:</label>
+            <input class="form-control snail_holder d-inline-block w-auto" type="number" id="snail_holder" min="0" max="999" value="0"/>
+            <br>
+            <img src="./assets/img/ui/sdodr_prlz.png" width="35" height="35" style="margin-bottom: 10px;">
+            <label class="fw-bold" for="sdodr_prlz_holder">Prlz:</label>
+            <input class="form-control sdodr_prlz_holder d-inline-block w-auto" type="number" id="sdodr_prlz_holder" min="0" max="9999" value="0"/>
+            <img src="./assets/img/ui/sdodr_keys.png" width="35" height="35" style="margin-bottom: 10px;">
+            <label class="fw-bold" for="sdodr_keys_holder">Locker Keys:</label>
+            <input class="form-control sdodr_keys_holder d-inline-block w-auto" type="number" id="sdodr_keys_holder" min="0" max="99" value="0"/>
+            <br>
+            <p class="fw-bold">Player Type:</p>
+            <div id="image_gallery_playertype">
+            <div class="image_gallery_playertype">
+              <img src="./assets/img/player/playertype/InkGirl.png" rsdb_id="0" class="player_playertype">
+              <img src="./assets/img/player/playertype/InkBoy.png" rsdb_id="1" class="player_playertype">
+              <img src="./assets/img/player/playertype/OctGirl.png" rsdb_id="2" class="player_playertype">
+              <img src="./assets/img/player/playertype/OctBoy.png" rsdb_id="3" class="player_playertype">
+              <img src="./assets/img/player/playertype/Rival.png" rsdb_id="4" class="player_playertype">
+              <img src="./assets/img/player/playertype/RSF.png" rsdb_id="5" class="player_playertype">
+              <img src="./assets/img/player/playertype/RSM.png" rsdb_id="6" class="player_playertype">
+            </div>   
+            <p class="fw-bold">Skintone:</p>       
+            <div id="image_gallery_skin">
+            </div>
+            <p class="fw-bold">Eye color:</p> 
+            <div id="image_gallery_eyecolor">
+            </div>
+            <p class="fw-bold">Hairstyle:</p> 
+            <div id="image_gallery_hair">
+            </div>
+            <p class="fw-bold">Eyebrows:</p> 
+            <div id="image_gallery_eyebrow">
+            </div>
+            <br>
+            <p class="fw-bold">Legwear:</p> 
+            <div id="image_gallery_pants">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalNameplateBg" tabindex="-1" role="dialog" aria-labelledby="modalNameplateBgTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1000px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalNameplateBgTitle">Splashtag Banner</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-header">
+          <div class="CstContainer">
+            <img src="./assets/img/npl/Npl_Tutorial00.png" class="item nameplate_bg_sel" id="chosenNameplateBg">
+          </div>
+          <button type="button" class="btn btn-primary get_npl_bg_button" style="translate: 300px -120px;position: absolute;" disabled="true" id="get_npl_bg_button">Obtain</button>
+          <button type="button" class="btn btn-primary remove_npl_bg_button" style="translate: 400px -120px;position: absolute;" disabled="true" id="remove_npl_bg_button">Remove</button>
+          <button type="button" class="btn btn-primary equip_npl_bg_button" style="translate: 500px -120px;position: absolute;" disabled="true" id="equip_npl_bg_button">Equip</button>
+          <button type="button" class="btn btn-primary bulk_get_npl_bg_button" id="bulk_get_npl_bg_button">Bulk Obtain</button>
+        </div>
+        <div class="modal-body">
+          <div id="image_gallery_nameplate_bg">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="modal fade" id="modalWeaponSett" tabindex="-1" role="dialog" aria-labelledby="modalWeaponSettTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 850px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalWeaponSettTitle">Weapons</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-header">
+          <div class="CstContainer">
+            <img src="./assets/img/player/customize/BtnWeapon.png" class="base">
+            <img src="./assets/img/player/weapon/Dummy.png" width="128" height="128" class="item" id="chosenWeaponImg">
+            <p class="chosenWpn" id="chosenWeaponInfo" player_specific="true"></p>
+          </div>
+          <button type="button" class="btn btn-primary get_weapon_button" style="translate: 300px 120px;position: absolute;" disabled="true" id="get_weapon_button">Obtain</button>
+          <button type="button" class="btn btn-primary remove_weapon_button" style="translate: 400px 120px;position: absolute;" disabled="true" id="remove_weapon_button">Remove</button>
+          <button type="button" class="btn btn-primary equip_weapon_button" style="translate: 500px 120px;position: absolute;" disabled="true" id="equip_weapon_button">Equip</button>
+          <button type="button" class="btn btn-primary bulk_get_weapon_button" id="bulk_get_weapon_button">Bulk Obtain</button>
+          <p class="fw-bold" style="translate: 300px 0px;position: absolute;" >Freshness:</p>
+          <input class="form-control weapon_freshness_holder w-auto" type="number" style="translate: 300px 30px;position: absolute;" id="weapon_freshness_holder" min="0" max="5" value="0"/>
+        </div>
+        <div class="modal-body">
+          <div id="image_gallery_weapon">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalGearHeadSett" tabindex="-1" role="dialog" aria-labelledby="modalGearHeadSettTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 850px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGearHeadSettTitle">Headgears</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-header">
+          <div class="CstContainer">
+            <img src="./assets/img/player/customize/BtnHeadgear.png" class="base">
+            <img src="./assets/img/player/gear/Dummy.png" width="128" height="128" class="item" id="chosenHedImg">
+            <p class="chosenHed" id="chosenHedInfo" player_specific="true"></p>
+          </div>
+          <button type="button" class="btn btn-primary get_headgear_button" style="translate: 300px 120px;position: absolute;" disabled="true" id="get_headgear_button">Obtain</button>
+          <button type="button" class="btn btn-primary remove_headgear_button" style="translate: 400px 120px;position: absolute;" disabled="true" id="remove_headgear_button">Remove</button>
+          <button type="button" class="btn btn-primary equip_headgear_button" style="translate: 500px 120px;position: absolute;" disabled="true" id="equip_headgear_button">Equip</button>
+          <button type="button" class="btn btn-primary bulk_get_headgear_button" id="bulk_get_headgear_button">Bulk Obtain</button>
+          <p class="fw-bold" style="translate: 300px -50px;position: absolute;" >Rarity:</p>
+          <input class="form-control gear_rarity_holder w-auto" type="number" style="translate: 300px -20px;position: absolute;" id="hed_rarity_holder" min="0" max="5" value="0"/>
+          <img class="ability_main hed_ability_main" id="hed_ability_main" style="translate: 300px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub hed_ability_sub" id ="hed_ability_sub0" style="translate: 370px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub hed_ability_sub" id ="hed_ability_sub1" style="translate: 415px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub hed_ability_sub" id ="hed_ability_sub2" style="translate: 460px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+        </div>
+        <div class="modal-body">
+          <div id="image_gallery_gear_head">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalGearClothesSett" tabindex="-1" role="dialog" aria-labelledby="modalGearClothesSettTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 850px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGearClothesSettTitle">Clothes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-header">
+          <div class="CstContainer">
+            <img src="./assets/img/player/customize/BtnClothes.png" class="base">
+            <img src="./assets/img/player/gear/Dummy.png" width="128" height="128" class="item" id="chosenCltImg">
+            <p class="chosenClt" id="chosenCltInfo" player_specific="true"></p>
+          </div>
+          <button type="button" class="btn btn-primary get_clothes_button" style="translate: 300px 120px;position: absolute;" disabled="true" id="get_clothes_button">Obtain</button>
+          <button type="button" class="btn btn-primary remove_clothes_button" style="translate: 400px 120px;position: absolute;" disabled="true" id="remove_clothes_button">Remove</button>
+          <button type="button" class="btn btn-primary equip_clothes_button" style="translate: 500px 120px;position: absolute;" disabled="true" id="equip_clothes_button">Equip</button>
+          <button type="button" class="btn btn-primary bulk_get_clothes_button" id="bulk_get_clothes_button">Bulk Obtain</button>
+          <p class="fw-bold" style="translate: 300px -50px;position: absolute;" >Rarity:</p>
+          <input class="form-control gear_rarity_holder w-auto" type="number" style="translate: 300px -20px;position: absolute;" id="clt_rarity_holder" min="0" max="5" value="0"/>
+          <img class="ability_main clt_ability_main" id="clt_ability_main" style="translate: 300px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub clt_ability_sub" id ="clt_ability_sub0" style="translate: 370px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub clt_ability_sub" id ="clt_ability_sub1" style="translate: 415px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub clt_ability_sub" id ="clt_ability_sub2" style="translate: 460px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+        </div>
+        <div class="modal-body">
+          <div id="image_gallery_gear_clothes">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalGearShoesSett" tabindex="-1" role="dialog" aria-labelledby="modalGearShoesSettTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 850px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGearShoesSettTitle">Shoes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-header">
+          <div class="CstContainer">
+            <img src="./assets/img/player/customize/BtnShoes.png" class="base">
+            <img src="./assets/img/player/gear/Dummy.png" width="128" height="128" class="item" id="chosenShsImg">
+            <p class="chosenShs" id="chosenShsInfo" player_specific="true"></p>
+          </div>
+          <button type="button" class="btn btn-primary get_shoes_button" style="translate: 300px 120px;position: absolute;" disabled="true" id="get_shoes_button">Obtain</button>
+          <button type="button" class="btn btn-primary remove_shoes_button" style="translate: 400px 120px;position: absolute;" disabled="true" id="remove_shoes_button">Remove</button>
+          <button type="button" class="btn btn-primary equip_shoes_button" style="translate: 500px 120px;position: absolute;" disabled="true" id="equip_shoes_button">Equip</button>
+          <button type="button" class="btn btn-primary bulk_get_shoes_button" id="bulk_get_shoes_button">Bulk Obtain</button>
+          <p class="fw-bold" style="translate: 300px -50px;position: absolute;" >Rarity:</p>
+          <input class="form-control gear_rarity_holder w-auto" type="number" style="translate: 300px -20px;position: absolute;" id="shs_rarity_holder" min="0" max="5" value="0"/>
+          <img class="ability_main shs_ability_main" id="shs_ability_main" style="translate: 300px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub shs_ability_sub" id ="shs_ability_sub0" style="translate: 370px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub shs_ability_sub" id ="shs_ability_sub1" style="translate: 415px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+          <img class="ability_sub shs_ability_sub" id ="shs_ability_sub2" style="translate: 460px 50px;position: absolute;" src="./assets/img/skill/None.png"></img>
+        </div>
+        <div class="modal-body">
+          <div id="image_gallery_gear_shoes">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalPlazaPost" target_id = "" tabindex="-1" role="dialog" aria-labelledby="modalPlazaPostTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 850px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPlazaPostTitle">Plaza Post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-header">
+          <div style="display: inline-block;">
+          <p class="fw-bold">Upload png image(resolution has to be 320x120 or 120x320):</p>
+          <input id ="plaza_img_upload" class="form-control" type="file" onchange="onUploadPlazaImg()" />
+          <p id="plaza_img_upload_error" class="fw-bold" style="color:red"></p>
+          <label for="oekaki_brightness_slider">Brightness Margin</label>
+          <input type="range" min="1" max="255" value="127" class="slider oekaki_brightness_slider" id="oekaki_brightness_slider">
+          <label for="oekaki_brightness_slider">Color Sensitivity</label>
+          <input type="range" min="0" max="255" value="255" class="slider oekaki_r_power_slider" id="oekaki_r_power_slider">
+          <input type="range" min="0" max="255" value="255" class="slider oekaki_g_power_slider" id="oekaki_g_power_slider">
+          <input type="range" min="0" max="255" value="255" class="slider oekaki_b_power_slider" id="oekaki_b_power_slider">
+          <label for="oekaki_is_inverted">Invert</label>
+          <input id="oekaki_is_inverted" class="form-check-input oekaki_is_inverted" type="checkbox">
+        </div>
+        </div>
+        <div class="modal-body">
+          <img id="oekaki_img" class="oekaki_img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="640" height="240">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalGearAbility" target_id = "" tabindex="-1" role="dialog" aria-labelledby="modalGearAbilityTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 850px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGearAbilityTitle">Select Ability</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="image_gallery_ability">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="modal modal-lg fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="warningModalLabel">Warning!</h5>
+          </div>
+          <div class="modal-body">
+            <!--<p>Using <strong>save edits</strong> is <strong class="lead mb-4" style="color:red">NOT SAFE ONLINE</strong> and you <strong>will</strong> <strong class="lead mb-4" style="color:red">GET BANNED</strong> if you <strong class="lead mb-4" style="color:red">USE</strong> it <strong class="lead mb-4" style="color:red">ONLINE</strong>. <strong>Please</strong>, only use <strong class="lead mb-4" style="color:red">OFFLINE</strong> or <strong class="lead mb-4" style="color:red">EMULATOR</strong>.</p>-->
+            <div class="alert alert-danger" role="alert">
+              <i class="bi bi-exclamation-triangle-fill"></i> Using save edits is <b>NOT SAFE ONLINE</b> and you will <b>GET BANNED</b> if you <b>USE IT ONLINE</b>. Please, only use <b>OFFLINE</b> or <b>EMULATOR</b>.
+            </div>
+            <p>By clicking <strong>"Accept"</strong>, you <strong>confirm</strong> that you have read the warning and that I am <strong>not</strong> responsible for any <strong>ban</strong> that this tool may cause.</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-secondary" href="./index.html">Go Back</a>
+            <button type="button" class="btn btn-danger" id="acceptModal">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>   
+
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/bitmap.js"></script>
+    <script src="./assets/js/pngjs.js"></script>
+    <script src="./assets/js/saveeditor.js"></script>
+</body>
+</html>

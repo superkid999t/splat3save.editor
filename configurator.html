@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="application-name" content="Flexlion">
+
+    <meta name="description" content="PhotoForCalico configurator.">
+    
+    <link rel="shortcut icon" href="./assets/img/favico.ico">
+    <link rel="apple-touch-icon" href="./assets/img/favico.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexlion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/js/jszip.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <img src="./assets/img/IconMenu_03^t.png" width="50" height="43" alt="">
+        <span class="fs-4" style="padding-left: 10px;">PhotoForCalico Configurator</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Configurator</a></li>
+        <li class="nav-item"><a href="./saveeditor.html" class="nav-link">Save Editor</a></li>
+        <li class="nav-item"><a href="./fxnetctrl.html" class="nav-link">FXNETCTRL</a></li>
+        <li class="nav-item"><a href="./account.html" class="nav-link">Account</a></li>
+      </ul>
+    </header>
+  </div>
+
+    
+  <div class="container">
+    <img class="d-block mx-auto mb-4 mw-100 h-auto" src="./assets/img/calico-logo.png" alt="" width="765" height="277">
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">This page is meant for creating and configure scenes made for the "PhotoForCalico" module found in the <a target="_blank" href="https://gamebanana.com/wips/70362">Splatoon 3 Flexlion Mod Menu</a></p>
+    </div>
+    <hr>
+    <p>If you want to edit an existing config(.zip):</p>
+    <input id ="load_config" class="form-control w-auto" type="file" onchange="onLoadCalicoConfig(document.getElementById('load_config').files[0])"/>
+    <hr>
+    <div class="ext-left">
+      <div class="">
+        <p class="display-6 fw-bold">Session Config</p>
+          <div>
+            <p class="lead">Map:</p>
+            <map>
+              <img id="chosenMapImg" src="./assets/img/stage/Dummy.png" data-bs-toggle="modal" data-bs-target="#modalMap" width="320" height="180" alt="">
+            </map>
+            <p class="" id="chosenMapInfo" ></p>
+            <p class=""><label for="chosenEnvTime">Nightime</label> <input id="chosenEnvTime" class="form-check-input" type="checkbox"></p> 
+          </div><hr>
+    </div>
+    
+    
+    <div class="ext-left">
+      <div class="">
+        <p class="display-6 fw-bold">Player Config</p>
+        <div class="mb-3">
+          <label for="player_num_holder">Number of players:</label>
+          <input class="form-control player_num_holder d-inline-block w-auto" type="number" id="player_num_holder" min="1" max="10" value="1"/>
+          <label for="player_id_holder">Current Player:</label>
+          <input class="form-control player_id_holder d-inline-block w-auto" type="number" id="player_id_holder" min="1" max="1" value="1"/>
+        </div> 
+        <div id="player-configurations">
+          <div class="player_cst">
+            <div>
+              <label class="fw-bold" for="player_name_holder">Name:</label>
+              <input class="form-control player_name_holder d-inline-block w-auto" id="player_name_holder" type="text"/>
+            </div>
+            <div>
+              <p class="fw-bold">Color:</p>
+              <input class="player_color_holder" id="player_color_holder" type="color"/>
+            </div>
+            <br>
+            <p>Player Type.</p>
+            <div id="image_gallery_playertype">
+            <div class="image_gallery_playertype">
+              <img src="./assets/img/player/playertype/InkGirl.png" rsdb_id="0" class="player_playertype">
+              <img src="./assets/img/player/playertype/InkBoy.png" rsdb_id="1" class="player_playertype">
+              <img src="./assets/img/player/playertype/OctGirl.png" rsdb_id="2" class="player_playertype">
+              <img src="./assets/img/player/playertype/OctBoy.png" rsdb_id="3" class="player_playertype">
+              <img src="./assets/img/player/playertype/Rival.png" rsdb_id="4" class="player_playertype">
+              <img src="./assets/img/player/playertype/RSF.png" rsdb_id="5" class="player_playertype">
+              <img src="./assets/img/player/playertype/RSM.png" rsdb_id="6" class="player_playertype">
+            </div>   
+            </div>
+            <p>Skintone.</p>       
+            <div id="image_gallery_skin">
+            </div>
+            <p>Eye color.</p> 
+            <div id="image_gallery_eyecolor">
+            </div>
+            <p>Hairstyle.</p> 
+            <div id="image_gallery_hair">
+            </div>
+            <p>Eyebrows.</p> 
+            <div id="image_gallery_eyebrow">
+            </div>
+            <br>
+            <p>Legwear.</p> 
+            <div id="image_gallery_pants">
+            </div>
+            <br>
+            <p>Weapon, gear and animation.</p>
+            <div class="customize-container">
+              <div class="customize">
+                <div class="CstContainer">
+                  <img src="./assets/img/player/customize/BtnWeapon.png" class="base">
+                  <img src="./assets/img/player/weapon/Dummy.png" class="item" data-bs-toggle="modal" data-bs-target="#modalWpn" id="chosenWeaponImg">
+                  <p class="chosenWpn" id="chosenWeaponInfo" player_specific="true"></p>
+                </div>
+                <div class="CstContainer">
+                  <img src="./assets/img/player/customize/BtnHeadgear.png" class="base">
+                  <img src="./assets/img/player/gear/Dummy.png" class="item" data-bs-toggle="modal" data-bs-target="#modalHed" id="chosenHedImg">
+                  <p class="chosenHed" id="chosenHedInfo" player_specific="true"></p>
+                </div>
+                <div class="CstContainer">
+                  <img src="./assets/img/player/customize/BtnClothes.png" class="base">
+                  <img src="./assets/img/player/gear/Dummy.png" class="item" data-bs-toggle="modal" data-bs-target="#modalClt" id="chosenCltImg">
+                  <p class="chosenClt" id="chosenCltInfo" player_specific="true"></p>
+                </div>
+                <div class="CstContainer">
+                  <img src="./assets/img/player/customize/BtnShoes.png" class="base">
+                  <img src="./assets/img/player/gear/Dummy.png" class="item" data-bs-toggle="modal" data-bs-target="#modalShs" id="chosenShsImg">
+                  <p class="chosenShs" id="chosenShsInfo" player_specific="true"></p>
+                </div>
+                <div class="anim pe-1">
+                  <br><p>Animation</p>
+                  <select class="form-select player_anim_list" id="player_anim_list"></select>
+                  <div class="anim_icon">
+                    <img id="player_anim_icon" src="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br><hr>
+        </div>
+      <a href="#" type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalSaveScene">Download Scene</a>
+    </div><br><br>
+
+
+<!-- Map Modal -->
+<div class="modal fade" id="modalMap" tabindex="-1" role="dialog" aria-labelledby="modalMapTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 840px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMapTitle">Choose a map</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Save Scene -->
+<div class="modal fade" id="modalSaveScene" tabindex="-1" role="dialog" aria-labelledby="modalSaveScene" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalSaveSceneTitle">Save Scene</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button type="button" onclick="downloadConfig()" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalWpn" tabindex="-1" role="dialog" aria-labelledby="modalWpn" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 830px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalWpnTitle">Weapon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hed modal -->
+<div class="modal fade" id="modalHed" tabindex="-1" role="dialog" aria-labelledby="modalHed" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 830px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalHedTitle">Headgear</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Clt modal -->
+<div class="modal fade" id="modalClt" tabindex="-1" role="dialog" aria-labelledby="modalClt" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 830px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCltTitle">Clothing</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Shs modal -->
+<div class="modal fade" id="modalShs" tabindex="-1" role="dialog" aria-labelledby="modalShs" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 830px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShsTitle">Shoes</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./assets/js/common.js"></script>
+<script src="./assets/js/calico.js"></script>
+</body>
+</html>
