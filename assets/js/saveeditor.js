@@ -984,7 +984,7 @@ async function load_options(){
 $(document).ready(async () => {
     await Promise.all([
         (async () => { langEUen = await fetchJson("https://raw.githubusercontent.com/Flexlion/flexlion.github.io/master/assets/lang/EUen.json") })(),
-        (async () => { WeaponInfoMain = await fetchJson("https://raw.githubusercontent.com/Flexlion/flexlion.github.io/master/assets/RSDB/WeaponInfoMain.json") })(),
+        (async () => { WeaponInfoMain = await fetchJson("https://raw.githubusercontent.com/superkid999t/splat3save.editor/main/assets/RSDB/WeaponInfoMain.json") })(),
         (async () => { GearInfoHead = await fetchJson("https://raw.githubusercontent.com/Flexlion/flexlion.github.io/master/assets/RSDB/GearInfoHead.json") })(),
         (async () => { GearInfoClothes = await fetchJson("https://raw.githubusercontent.com/Flexlion/flexlion.github.io/master/assets/RSDB/GearInfoClothes.json") })(),
         (async () => { GearInfoShoes = await fetchJson("https://raw.githubusercontent.com/Flexlion/flexlion.github.io/master/assets/RSDB/GearInfoShoes.json") })(),
