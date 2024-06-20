@@ -390,7 +390,7 @@ async function onEditSave(isCloudSave){
 function loadWeapons(){
     let validInfos = [];
     for(let i = 0; i < WeaponInfoMain.length; i++){
-	if(WeaponInfoMain[i]["Type"] != "Mission") continue; // Only add obtainable weapons
+	if(WeaponInfoMain[i]["Type"] != "Versus") continue; // Add every weapon besides mission
         validInfos.push(WeaponInfoMain[i]);
     }
     loadClickableIdOptions(
