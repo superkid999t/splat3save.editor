@@ -390,6 +390,7 @@ async function onEditSave(isCloudSave){
 function loadWeapons(){
     let validInfos = [];
     for(let i = 0; i < WeaponInfoMain.length; i++){
+	if(WeaponInfoMain[i]["Type"] != "Versus","Coop") continue; // Only add obtainable weapons
         validInfos.push(WeaponInfoMain[i]);
     }
     loadClickableIdOptions(
