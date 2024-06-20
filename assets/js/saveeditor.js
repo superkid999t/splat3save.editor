@@ -390,7 +390,7 @@ async function onEditSave(isCloudSave){
 function loadWeapons(){
     let validInfos = [];
     for(let i = 0; i < WeaponInfoMain.length; i++){
-	if(WeaponInfoMain[i]["Type"] == "Other") continue; // Add Versus Weapons
+	if(WeaponInfoMain[i]["Type"] != "Other") continue; // Add Versus Weapons
         validInfos.push(WeaponInfoMain[i]);
     }
     loadClickableIdOptions(
