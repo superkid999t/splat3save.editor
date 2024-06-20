@@ -48,7 +48,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -115,7 +115,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -281,7 +281,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -501,7 +501,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -721,7 +721,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -980,7 +980,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -1253,7 +1253,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -1525,7 +1525,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -1592,7 +1592,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -1659,7 +1659,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -1838,7 +1838,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -2142,7 +2142,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -2323,7 +2323,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -2564,7 +2564,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -2743,7 +2743,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -2802,7 +2802,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -2861,7 +2861,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -2924,7 +2924,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -2987,7 +2987,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -3180,7 +3180,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -3436,7 +3436,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -3802,7 +3802,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -3930,7 +3930,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -4380,7 +4380,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -4701,7 +4701,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -4894,7 +4894,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5002,7 +5002,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5047,7 +5047,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5186,7 +5186,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5370,7 +5370,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5554,7 +5554,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5694,7 +5694,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5831,7 +5831,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5876,7 +5876,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -5921,7 +5921,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -6060,7 +6060,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -6244,7 +6244,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -6352,7 +6352,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -6545,7 +6545,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -6801,7 +6801,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -7057,7 +7057,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -7314,7 +7314,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -7505,7 +7505,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -7568,7 +7568,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -7631,7 +7631,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -7824,7 +7824,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -7907,7 +7907,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -8148,7 +8148,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -8389,7 +8389,7 @@
     "SpecialPoint": 180,
     "SpecialWeapon": "Work/Gyml/SpUltraStamp.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Torpedo.spl__WeaponInfoSub.gyml",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -8630,7 +8630,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -8873,7 +8873,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -8932,7 +8932,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -9113,7 +9113,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -9353,7 +9353,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -9534,7 +9534,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -9713,7 +9713,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -9772,7 +9772,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -9831,7 +9831,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -10012,7 +10012,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -10210,7 +10210,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -10394,7 +10394,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -10484,7 +10484,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -10529,7 +10529,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -10669,7 +10669,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -10880,7 +10880,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -11073,7 +11073,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -11257,7 +11257,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -11441,7 +11441,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -11714,7 +11714,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -11759,7 +11759,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -11851,7 +11851,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -11896,7 +11896,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -12222,7 +12222,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -12406,7 +12406,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -12545,7 +12545,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -12635,7 +12635,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -12680,7 +12680,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -12819,7 +12819,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -13018,7 +13018,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -13207,7 +13207,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -13391,7 +13391,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -13486,7 +13486,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -13641,7 +13641,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -13845,7 +13845,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -13999,7 +13999,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -14099,7 +14099,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -14149,7 +14149,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Rival",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -14199,7 +14199,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -14354,7 +14354,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -14637,7 +14637,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -14835,7 +14835,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -15019,7 +15019,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -15158,7 +15158,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -15342,7 +15342,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -15432,7 +15432,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -15571,7 +15571,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -15756,7 +15756,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -15898,7 +15898,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -16052,7 +16052,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -16207,7 +16207,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -16359,7 +16359,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "",
     "SubWeapon": "",
-    "Type": "Other",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
@@ -16513,7 +16513,7 @@
     "SpecialPoint": 200,
     "SpecialWeapon": "Work/Gyml/SpMultiMissile.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Curling.spl__WeaponInfoSub.gyml",
-    "Type": "Coop",
+    "Type": "Versus",
     "UIParam": [
       {
         "Type": "Range",
